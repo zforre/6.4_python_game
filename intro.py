@@ -1,5 +1,6 @@
 import time
 
+
 # Setup
 yes_no = ["yes", "no"]
 directions = ["left", "right", "middle", "backward"]
@@ -52,10 +53,15 @@ while response not in yes_no:
 response = ""
 while response not in directions:
     print("You see three doors at the end of the hallway")
+    time.sleep(1)
     print("To your right, you see another door.")
+    time.sleep(1)
     print("There is a door in the middle.")
+    time.sleep(1)
     print("To your left, you see another door.")
+    time.sleep(1)
     print("Behind you is the exit.\n")
+    time.sleep(1)
     response = input("What direction do you move?\nleft/right/forward/backward\n")
     if response == "left":
         print(", " + name + ".")
@@ -68,7 +74,7 @@ while response not in directions:
     elif response == "left":
             print(".\n")
     elif response == "backward":
-        print("Ther is no escape. YOUR SOUL IS MINE, " + name + ".")
+        print("There is no escape. YOUR SOUL IS MINE, " + name + ".")
         quit()
     else:
         print("I didn't understand that.\n")
