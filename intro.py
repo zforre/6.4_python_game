@@ -2,6 +2,8 @@ import time
 
 
 # Setup
+
+
 yes_no = ["yes", "no"]
 directions = ["left", "right", "middle", "backward"]
 
@@ -61,8 +63,10 @@ while response not in directions:
     print("To your left, you see another door.")
     time.sleep(1)
     print("Behind you is the exit.\n")
+
     time.sleep(1)
     response = input("What direction do you move?\nleft/right/forward/backward\n")
+
     if response == "left":
         print(", " + name + ".")
         quit()
