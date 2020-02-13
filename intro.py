@@ -1,22 +1,32 @@
+import time
+
 # Setup
 yes_no = ["yes", "no"]
 directions = ["left", "right", "middle", "backward"]
 
 # Introduction
 print("Hey Wake up")
+time.sleep(1)
 print("......")
+time.sleep(1)
 print("Wake Up")
 print("......")
+time.sleep(3)
 print("Wake Up!!")
+time.sleep(2)
 print("You wake up in a cold sweat you hear a voice calling out to you.")
+time.sleep(5)
 print("Are you ok? I've heard the beacon I'm going to help you get home. Do you see anyone else with you?")
 print("You look around. You don't recgonize where you are")
+time.sleep(7)
 print("All you see is that you were chained to a bed, But somehow the chains have been cut")
 print("You notice other empty beds around you")
 print("You hear the voice again")
+time.sleep(2)
 name = input("What is your name?\n")
 print("Alright, " + name + ". Get up we don't have much time before they get here")
 print("You don't move")
+time.sleep(1)
 print("Listen " + name + " I know  all this must seem really really strange to you")
 print("But if you want to get back home I'm all you got chief")
 print("You get up and start walking towards an exit")
