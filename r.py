@@ -1,7 +1,7 @@
 import time
 
 ##The character enters the room..
-def enter():
+def begin():
     print('As you walk into this room, there is a floodlight pointed at the door, blinding you from the rest of the room.\n\
     It looks like there isn\'t an end. Use caution, I can\'t help in there')
 

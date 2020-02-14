@@ -77,7 +77,7 @@ def start():
 
         if response == "left":
             print(", " + name + ".")
-            quit()
+            r.begin()
         elif response == "right":
             print(".\n")
             z.room()
