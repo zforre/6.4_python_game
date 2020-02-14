@@ -1,4 +1,4 @@
-import time, m
+import time, m, z
 from colorama import *
 init()
 
@@ -80,6 +80,7 @@ def start():
             quit()
         elif response == "right":
             print(".\n")
+            z.room()
         elif response == "middle":
             print(".\n")
             m.enter()
