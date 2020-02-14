@@ -80,7 +80,22 @@ if action == 'turn off the lamp':
     if action == 'yes':
         lighton()
     else:
-        pass
+        print('The room is dark, but you can see a window.')
+        action = input('Do you want to check it out?')
+
+        if action == 'yes':
+            window()
+            time.sleep(1)
+            quit()
+        else:
+            print('How can we find anything here?')
+            action = input('Do you want to leave the room?')
+
+            if action == 'yes':
+                quit()
+            else:
+                action is not 'turn off the lamp'
+
 else:
     if action == 'walk around the lamp':
         walkpast()
@@ -112,54 +127,19 @@ else:
                             action = input('Do you want to leave with the flashlight? Or examine the rest of the room? (leave/stay)')
 
                             if action == 'leave':
+                                explore_room = False
                                 quit()
             elif action == 'paper':
                 crumpled_note()
                 action = input('Do you want to turn the paper over? or leave it be? (yes/no)')
                 if action == 'yes':
-                    print('Nothing...This place isn\'t very helpful.')
+                    print('There\'s Spanish on this side but hard to make out. This place isn\'t very helpful.')
+                    print('The note reads "la gente es la razon porque yo solo tengo a mi mismo"')
+                    action = input('Do you want to keep this paper with you?')
+                        # if action == 'yes': ## this needs to add paper to the class
                 else:
                     pass
+
+
             elif action == 'window':
                 window()
-
-
-
-    # if action == 'walk around the lamp':
-    #     walkpast()
-    #     while action is not 'no':
-    #         action = input('Do you want to examine the paper, flashlight, or window? (enter "paper", "flashlight", or "window")')
-    #         if action == 'flashlight':
-    #             flashlight()
-    #             action = input('Do you want to take a closer look at the door? yes/no?')
-    #             if action == 'yes':
-    #                 door()
-    #                 action = input('Open the trap door?')
-    #                 if action == 'yes':
-    #                     trapdoor()
-    #                     action = input('Do you want to continue to the door?')
-    #                     if action == 'yes':
-    #                         print('....')
-    #                         time.sleep(1)
-    #                         print('The door... its')
-    #                         time.sleep(1)
-    #                         print('It\'s been opened?')
-    #                         action = input('Do you want to leave with the flashlight? Or examine the rest of the room? (leave/stay)')
-    #                         if action == 'leave':
-    #                             quit()
-
-
-    elif action == 'paper':
-        crumpled_note()
-        action = input('Do you want to see the flashlight or the window?')
-        # if action == '':
-
-
-        #
-        #     input('Do you want to examine the window? or the paper?')
-        # elif action == 'paper'
-        #     crumpled_note()
-        #     input('Do you want to examine the window? or the flashlight?')
-        # elif action == 'window':
-        #     window()
-        #     input('Do you want to examine the flashlight? or the paper?')
