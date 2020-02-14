@@ -1,4 +1,4 @@
-import time, m, z
+import time, m, z, r
 from colorama import *
 init()
 
