@@ -2,6 +2,18 @@ import time, m, z, r
 from colorama import *
 init()
 
+class Player:
+
+    name = []
+    items = {}
+
+    def __init__(self, name)
+        self.name = name
+        self.items = items
+        self.names.append(name)
+
+    def __
+
 # Setup
 yes_no = ["yes", "no"]
 directions = ["left", "right", "middle", "exit"]
