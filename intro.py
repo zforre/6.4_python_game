@@ -4,15 +4,17 @@ init()
 
 class Player:
 
-    name = []
+    names = []
     items = {}
 
-    def __init__(self, name)
+    def __init__(self, name):
         self.name = name
         self.items = items
         self.names.append(name)
 
-    def __
+    def __str__(self):
+        return self.name
+
 
 # Setup
 yes_no = ["yes", "no"]

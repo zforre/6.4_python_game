@@ -20,23 +20,25 @@ def room():
             quit()
         else:
             print("I didn't understand that.\n")
-            pass
+            return
 
     print("Now that you can see a bit, you start to notice scratches all over the floors and walls.")
-    time.sleep(1)
+    time.sleep(2)
     print("You see that there is a bed in the corner and a mirror opposite to that.")
-    time.sleep(1)
+    time.sleep(2)
     print('You walk towards the bed and cant keep from noticing how filthy it looks.')
+    time.sleep(3)
 
     response = ""
     while response not in yes_no:
         response = input("Would you like to take a closer look at the bed?\nyes/no\n")
         if response == "yes":
             print("You pull the blanket to the side and notice a severed hand laying in a pool of blood.\n")
-            time.sleep(1)
+            time.sleep(2)
             print("The hand seems to be holding a note, you pry it out of the tight grip of the lifeless hand.")
-            time.sleep(1)
-            print("The letter reads, 'Beware of the helping hand for it may lead to losing yours")
+            time.sleep(2)
+            print("The letter reads, 'Beware of the helping hand for it may lead to losing yours...")
+            time.sleep(2)
             print("You look down and notice that your hands are gone, you have dropped the letter and the lighter.")
             time.sleep(2)
             print("The lighter sets the note on fire, it quickly sets the bed on fire. Your only option is to run to the door")
@@ -47,12 +49,12 @@ def room():
             print("You Died!")
         elif response == "no":
             print("You walk over to the mirror and see nothing reflected, it's like you dont exist.")
-            time.sleep(1)
+            time.sleep(2)
             print("Everything slowly starts to fade, you feel yourself sinking into darkness...")
             quit()
         else:
             print("I didn't understand that.\n")
-            pass
+            return
     
 
 
