@@ -4,18 +4,26 @@ init()
 
 class Player:
 
-    name = []
+    names = []
     items = {}
 
     def __init__(self, name):
+        self.name = name
+        self.items = items
+        self.names.append(name)
 
-        self.name.append(name)
+    def __str__(self):
+        return self.name
 
 
 # Setup
 yes_no = ["yes", "no"]
 directions = ["left", "right", "middle", "exit"]
 play_game = True
+
+# create your player class
+
+# player = Player()
 
 def start():
     # Introduction

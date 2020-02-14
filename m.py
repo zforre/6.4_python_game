@@ -4,7 +4,7 @@ from colorama import *
 init()
 
 
-def enter():
+def enter(player):
     # Setup
     yes_no = ["yes", "no"]
     directions = ["left", "right", "middle", "exit"]
