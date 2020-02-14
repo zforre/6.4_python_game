@@ -72,9 +72,9 @@ It looks like there isn\'t an end. Use caution, I can\'t help in here')
 time.sleep(5)
 
 
-action = input('Select your action: Turn off the lamp? Walk around the Lamp?')
+action = input('Select your action: Turn off the light? Walk around the light?')
 
-if action == 'turn off the lamp':
+if action == 'turn off the light':
     lightoff()
     action = input('Do you want to turn the floodlight back on?')
     if action == 'yes':
@@ -94,52 +94,51 @@ if action == 'turn off the lamp':
             if action == 'yes':
                 quit()
             else:
-                action is not 'turn off the lamp'
+                print('Let\'s get around this light' )
+                action = 'walk around the light'
+if action == 'walk around the light':
+    walkpast()
 
-else:
-    if action == 'walk around the lamp':
-        walkpast()
+    explore_room = True
 
-        explore_room = True
+    while explore_room:
 
-        while explore_room:
+        action = input('Do you want to examine the paper, flashlight, or window? (enter "paper", "flashlight", or "window")')
 
-            action = input('Do you want to examine the paper, flashlight, or window? (enter "paper", "flashlight", or "window")')
+        if action == 'flashlight':
+            flashlight()
+            action = input('Do you want to take a closer look at the door? yes/no?')
 
-            if action == 'flashlight':
-                flashlight()
-                action = input('Do you want to take a closer look at the door? yes/no?')
+            if action == 'yes':
+                door()
+                action = input('Open the trap door?')
 
                 if action == 'yes':
-                    door()
-                    action = input('Open the trap door?')
+                    trapdoor()
+                    action = input('Do you want to continue to the door?')
 
                     if action == 'yes':
-                        trapdoor()
-                        action = input('Do you want to continue to the door?')
+                        print('....')
+                        time.sleep(1)
+                        print('The door... its')
+                        time.sleep(1)
+                        print('It\'s been opened?')
+                        action = input('Do you want to leave with the flashlight? Or examine the rest of the room? (leave/stay)')
 
-                        if action == 'yes':
-                            print('....')
-                            time.sleep(1)
-                            print('The door... its')
-                            time.sleep(1)
-                            print('It\'s been opened?')
-                            action = input('Do you want to leave with the flashlight? Or examine the rest of the room? (leave/stay)')
-
-                            if action == 'leave':
-                                explore_room = False
-                                quit()
-            elif action == 'paper':
-                crumpled_note()
-                action = input('Do you want to turn the paper over? or leave it be? (yes/no)')
-                if action == 'yes':
-                    print('There\'s Spanish on this side but hard to make out. This place isn\'t very helpful.')
-                    print('The note reads "la gente es la razon porque yo solo tengo a mi mismo"')
-                    action = input('Do you want to keep this paper with you?')
-                        # if action == 'yes': ## this needs to add paper to the class
-                else:
-                    pass
+                        if action == 'leave':
+                            explore_room = False
+                            quit()
+        elif action == 'paper':
+            crumpled_note()
+            action = input('Do you want to turn the paper over? or leave it be? (yes/no)')
+            if action == 'yes':
+                print('There\'s Spanish on this side but hard to make out. This place isn\'t very helpful.')
+                print('The note reads "la gente es la razon porque yo solo tengo a mi mismo"')
+                action = input('Do you want to keep this paper with you?')
+                    # if action == 'yes': ## this needs to add paper to the class
+            else:
+                pass
 
 
-            elif action == 'window':
-                window()
+        elif action == 'window':
+            window()
