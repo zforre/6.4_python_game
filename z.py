@@ -46,7 +46,9 @@ def room():
             time.sleep(3)
             print("You Died!")
         elif response == "no":
-            print("You shouldn't do that, there may be something important to your survival.")
+            print("You walk over to the mirror and see nothing reflected, it's like you dont exist.")
+            time.sleep(1)
+            print("Everything slowly starts to fade, you feel yourself sinking into darkness...")
             quit()
         else:
             print("I didn't understand that.\n")
