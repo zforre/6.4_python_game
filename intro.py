@@ -7,12 +7,10 @@ class Player:
     name = []
     items = {}
 
-    def __init__(self, name)
-        self.name = name
-        self.items = items
-        self.names.append(name)
+    def __init__(self, name):
 
-    def __
+        self.name.append(name)
+
 
 # Setup
 yes_no = ["yes", "no"]
@@ -42,6 +40,8 @@ def start():
     print("You hear the voice again")
     time.sleep(4)
     name = input(Fore.GREEN + "What is your name?\n")
+    player_one = Player(name)
+    print(player_one)
     print(Fore.GREEN + "Alright, " + name + ". Get up we don't have much time before they get here")
     print(Fore.WHITE + "You don't move")
     time.sleep(4)
