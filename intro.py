@@ -4,7 +4,7 @@ init()
 
 # Setup
 yes_no = ["yes", "no"]
-directions = ["left", "right", "middle", "backward"]
+directions = ["left", "right", "middle", "exit"]
 play_game = True
 
 def start():
@@ -48,13 +48,13 @@ def start():
             print("Something catches your eye you walk towards the end of the hallway")
             time.sleep(3)
         elif response == "no":
-            print("Your vison goes blurry you have trouble breathing.")
+            print(Fore.RED + "Your vison goes blurry you have trouble breathing.")
             time.sleep(3)
-            print("You start to black out")
+            print(Fore.RED + "You start to black out")
             time.sleep(3)
-            print("A manical voice pierces through your head")
+            print(Fore.RED + "A manical voice pierces through your head")
             time.sleep(3)
-            print("Too late " + name + " ")
+            print(Fore.RED + "Too late " + name + " ")
             quit()
         else:
             print("I didn't understand that.\n")
@@ -62,18 +62,18 @@ def start():
     # Next part of game
     response = ""
     while response not in directions:
-        print("You notice three doors at the end of the hallway")
+        print(Fore.YELLOW + "You notice three doors at the end of the hallway")
         time.sleep(2)
-        print("To your right, you see a door.")
+        print(Fore.YELLOW + "There is a door on the RIGHT.")
         time.sleep(1)
-        print("There is a door in the middle.")
+        print(Fore.YELLOW + "There is a door in the MIDDLE.")
         time.sleep(1)
-        print("To your left, you see another door.")
+        print(Fore.YELLOW + "There is a doorr on the LEFT.")
         time.sleep(1)
-        print("Behind you is the exit.\n")
+        print(Fore.YELLOW + "Behind you is the exit.\n")
 
         time.sleep(1)
-        response = input("What direction do you move?\nleft/right/middle/backward\n")
+        response = input(Fore.WHITE + "What direction do you move?\nleft/right/middle/exit\n")
 
         if response == "left":
             print(", " + name + ".")
@@ -84,7 +84,7 @@ def start():
         elif response == "middle":
             print(".\n")
             m.enter()
-            print('You are teleported back to the main hallway')
+            print(Fore.WHITE + 'You are teleported back to the main hallway')
             time.sleep(5)
             print('You notice the middle door has vanished')
             time.sleep(4)
