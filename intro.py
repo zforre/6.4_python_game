@@ -19,6 +19,10 @@ yes_no = ["yes", "no"]
 directions = ["left", "right", "middle", "exit"]
 play_game = True
 
+# create your player class
+
+# player = Player()
+
 def start():
     # Introduction
     print(Fore.GREEN + "Hey Wake up")
