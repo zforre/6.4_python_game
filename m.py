@@ -1,78 +1,78 @@
 import random
 import time
+from colorama import *
+init()
 
-print("As you walk in you see a man blindfolded standing on a platform")
-time.sleep(5)
-print("You hear a distorted voice")
-time.sleep(4)
-print("HA HA HA HA HA HA YOU FOOL")
-time.sleep(4)
-print("All your life you lived as if what you did had no consequences")
-time.sleep(4)
-print("Now you will see the weight of your actions")
-time.sleep(4)
-print("This mans life hangs in the balance")
-time.sleep(4)
 
-def play_again():
-    answer = input('Would you like to play again? yes/no').lower()
-    if answer == 'y' or answer =='yes':
-        play_game()
-    else:
-        pass
+def enter():
+    # Setup
+    yes_no = ["yes", "no"]
+    directions = ["left", "right", "middle", "exit"]
 
-def get_word():
-    words = ("redrum", "slaughter", "murder", "escape",)
-    return random.choice(words)
+    # Introduction
+    print("You walk in the door you see a Demon standing the middle of the room")
+    time.sleep(2)
+    print("He looks at you and says")
+    time.sleep(2)
+    print(Fore.RED + "Welcome to the Thunder Dome .  . . .  . Person")
+    time.sleep(2)
+    print(Fore.RED + "If you wish to make it through")
+    time.sleep(2)
+    print(Fore.RED + "You must shred")
+    time.sleep(2)
+    print(Fore.RED + "BEFORE I SHRED YOU")
+    time.sleep(2)
+    print(".................")
+    time.sleep(2)
+    print(Fore.WHITE + "All of a sudden a light is shined on a table")
+    time.sleep(2)
 
-def play_game():
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    word = get_word()
-    letters_guessed = []
-    tries = 7
-    guessed = False
 
-    print('The word contains', len(word), 'letters.')
-    dashes = ' '.join('_' * len(word))
-    print(dashes)
-    while guessed == False and tries > 0:
-        print('You have ' + str(tries) + ' tries')
-        guess = input('Please enter one letter or the full word.').lower()
-        #1 - user inputs a letter
-        if len(guess) == 1:
-            if guess not in alphabet:
-                print('You have not entered a letter.')
-            elif guess in letters_guessed:
-                print('You have already guessed that letter before.')
-            elif guess not in word:
-                print('You fool, that letter is not part of the word :(')
-                letters_guessed.append(guess)
-                tries -=1
-            elif guess in word:
-                print('Lucky Guess!, that letter exists in the word!')
-                letters_guessed.append(guess)
-            else:
-                print('No idea why we get this message, should be investigated further!')
-
-        #2 - user inputs letters where the total number of letters =/= total number of letters in the word.
+    # Start of game
+    response = ""
+    while response not in yes_no:
+        response = input("Would you like to walk to the table?\nyes/no\n")
+        if response == "yes":
+            print("On the table you see three items.\n")
+            time.sleep(2)
+        elif response == "no":
+            print("Get Rickety wRecked")
+            quit()
         else:
-            print('The length of your guess is not the same as the length of the word we\'re looking for.')
+            print("I didn't understand that.\n")
+            pass
+    # Next part of game
+    response = ""
 
-        status = ''
-        if guessed == False:
-            for letter in word:
-                if letter in letters_guessed:
-                    status += letter
-                else:
-                    status += '-'
-            print(status)
-
-        if status == word:
-            print('Well done, you saved this mans life!')
-            guessed = True
-        elif tries == 0:
-            print('You have run out of guesses and you haven\'t guessed the word.')
-
-    play_again()
-
-play_game()
+    while response not in directions:
+        print("On the LEFT side of the table you see a CHEESE GRATER.")
+        time.sleep(2)
+        print("On the RIGHT side of the table you see a PAPER SHREDDER.")
+        time.sleep(2)
+        print("And in MIDDLE of the two there is a 1970 GIBSON FLYING V.")
+        time.sleep(2)
+        print("Behind you is the exit.\n")
+        time.sleep(2)
+        response = input("What are you going to shred with?\nleft/right/middle/exit\n")
+        time.sleep(2)
+        if response == "left":
+            print("The demon uses the chesse grater to add you to his pizza.")
+            time.sleep(2)
+            quit()
+        elif response == "right":
+            print("You go head first into the paper shredder.\n")
+            time.sleep(2)
+            quit()
+        elif response == "middle":
+            print("You pick up the Flying V your fingers start moving on their own.")
+            time.sleep(1)
+            print("You play the most amazing guitar solo ever played in the history of the known universe.")
+            time.sleep(1)
+            print("It's so beautiful the demon starts crying like a little baby.")
+            time.sleep(2)
+        elif response == "exit":
+            print("FOOLISH HUMAN THERE IS NO ESCAPE")
+            time.sleep(1)
+            quit()
+        else:
+            print("I didn't understand that.\n")
